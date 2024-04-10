@@ -11,7 +11,7 @@
 	\section{Scopo}
 		Stabilire la dipendenza che sussiste fra il periodo dell'oscillazione e la sua ampiezza
 	\section{Cenni teorici}
-	Il pendolo fisico (o il pendolo semplice, che può essere visto come caso particolare del pendolo fisico) può essere schematizzato come un corpo rigido soggetto ad una forza peso che induce un momento torcente rispetto al perno $O$ e la reazione vincolare $R$ che agiscono sulla massa $m$, da cui si ricava utilizzando la $II^a$ cardinale:
+	Il pendolo fisico (o il pendolo semplice, che può essere visto come caso particolare del pendolo fisico) può essere schematizzato come un corpo rigido soggetto ad una forza peso che induce un momento torcente rispetto al perno $O$ e la reazione vincolare $R$ (che non induce un momento torcente rispetto al polo $O$) che agiscono sulla massa $m$, da cui si ricava utilizzando la $2^a$ cardinale:
 	\begin{equation}
 		\frac{d\vec{L}}{dt} = I\ddot{\theta} = -mgl\sin{\theta}
 	\end{equation}
@@ -109,14 +109,14 @@ a cui possiamo assegnare l'incertezza tramite la seguente formula
 \begin{equation}
 	\sigma_{v_{CM}} = v_{CM} \sqrt{ \left( \frac{\sigma_w}{w} \right)^2 + \left( \frac{\sigma_{\tau_i}}{\tau_i} \right)^2 + \left( \frac{\sigma_l}{l} \right)^2 + \left( \frac{\sigma_d}{d} \right)^2}
 \end{equation}
-Tuttavia che errore possiamo assegnare a $\tau_i$? Considerando che la misura del \emph{tempo transiente} viene fatta da uno strumento digitale allora tutti i valori compresi nella sensibilità dello strumento sono equiprobabili, dunque l'errore che possiamo assegnare a $\tau_i$ è pari alla sensibilità dello strumento (pari a $4 \, \si{\micro\second}$):
+Tuttavia che errore possiamo assegnare a $\tau_i$? Considerando che la misura del \emph{tempo transiente} viene fatta da uno strumento digitale allora tutti i valori compresi nel range della sensibilità dello strumento sono equiprobabili, dunque l'errore che possiamo assegnare a $\tau_i$ è pari a
 $$
 	\sigma_{\tau_i} = \frac{4}{\sqrt{12}} \, \si{\micro\second}
 $$
 Abbiamo prima effettuato il grafico del periodo in funzione del tempo, da cui ci si aspettava che il periodo $T$ diminuisse nel corso del tempo (siccome agiscono gli attriti dell'aria)
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.60]{Grafico_periodo_tempo.pdf}
+	\includegraphics[scale=0.45]{Grafico_periodo_tempo.pdf}
 	\caption{Grafico del periodo in funzione del tempo: si osserva che il periodo, come atteso teoricamente, diminuisce nel corso del tempo. Le \emph{spezzate} che si osservano nel grafico possono derivare da \emph{colpi} che sono stati dati inavvertitamente al banco e, siccome il pendolo era molto sensibile, si sono fatte \emph{sentire} }
 \end{figure}
 A quel punto, abbiamo voluto utilizzare il metodo del fit tramite parametri liberi del grafico velocità-tempo che, a causa dello smorzamento dovuto alle forze di attrito (supponendo che la forza di attrito agisca proporzionalmente alla velocità del centro di massa), deve risultare essere della forma
@@ -143,17 +143,16 @@ I parametri stimati dal fit risultano esseri pari a
 	&v_0 = (0.5825 \pm 0.0001) \, \si{\meter\per\second} \\
 	&\lambda = (0.0017382 \pm 0.0000006)\, \si{\second^{-1}}
 \end{align}
-che risultano essere ragionevoli, siccome dal grafico velocità-tempo si osserva che ci dovevamo aspettare un valore pari a circa $0.59 \, \si{\meter\per\second}$ per il parametro $v_0$ e si osserva che il tempo di smorzamento $\tau$ atteso è circa $580 \, \si{\second}$ (siccome si osserva che la velocità si è ridotta di un fattore pari ad $\frac{1}{e}$) dunque, avendo utilizzato $\lambda$, ci dovrebbe aspettare un valore circa pari a $0.0017 \, \si{\second^{-1}}$. \\
+che risultano essere ragionevoli, siccome il valore di $v_0(0)$ misurato è pari a $(0.586 \pm 0.002) \, \si{\meter\per\second}$ e dunque dista dal valore stimato dal fit per una distanza pari a $1.75\sigma$ che, considerando le dissipazioni dovute all'attrito, è un valore \emph{abbastanza} ragionevole; per quanto riguardo il parametro $\lambda$ si osserva che il tempo di smorzamento $\tau = \frac{1}{\lambda}$ atteso è circa $580 \, \si{\second}$ (siccome si osserva che la velocità si è ridotta di un fattore pari ad $\frac{1}{e}$) dunque, avendo utilizzato $\lambda$, ci dovrebbe aspettare un valore circa pari a $0.0017 \, \si{\second^{-1}}$. \\
 A questo punto abbiamo studiato la dipendenza fra il periodo dell'oscillazione e l'angolo $\theta_0$ effettuando il fit di 2 diversi modelli teorici: il primo era l'espansione in serie di Taylor del periodo dell'oscillazione fino all'ordine $n=2$ e il secondo fino all'ordine $n=4$. In formula:
 \begin{align}
 	&T(\theta) = T_0 \left(1 + \frac{1}{16}\theta_0^2 \right) \\
 	&T(\theta) = T_0 \left(1 + \frac{1}{16}\theta_0^2 + \frac{11}{3072}\theta_0^4 \right)
 \end{align}
-Tuttavia sorge la domanda di quale errore porre al periodo di oscillazione misurato dallo strumento: non sapendo che tipo di operazioni matematiche il programma di acquisizione effettuava per calcolare il periodo che misurava ogni volta in cui la sbarretta di ferro copriva la fotocellula, abbiamo osservato le varie misure e abbiamo osservato che la differenza fra un periodo ed un altro non è mai inferiore a circa $0.0001 \, \si{\second}$ dunque abbiamo deciso di utilizzare questo valore come una sorta di \emph{sensibilità} su ogni misura del periodo. Per quanto riguarda il calcolo di $\theta$, abbiamo utilizzato la formula~\ref{eq:angolo} e abbiamo assegnato un'incertezza pari a
+Tuttavia sorge la domanda di quale errore porre al periodo di oscillazione misurato dallo strumento: non sapendo che tipo di operazioni matematiche il programma di acquisizione effettuava per calcolare il periodo che misurava ogni volta in cui la sbarretta di ferro copriva la fotocellula, abbiamo osservato le varie misure e abbiamo osservato che la differenza fra un periodo ed un altro non è mai inferiore a circa $0.0001 \, \si{\second}$ dunque abbiamo deciso di utilizzare questo valore come \clearpage \noindent una sorta di \emph{sensibilità} su ogni misura del periodo. Per quanto riguarda il calcolo di $\theta$, abbiamo utilizzato la formula~\ref{eq:angolo} e abbiamo assegnato un'incertezza pari a
 $$
 	\sigma_{\theta_0} = \left| {\frac{1}{\sqrt{1-k^2}}\sigma_k} \right|
 $$
-\clearpage
 \noindent dove $k = 1-\frac{v_0^2}{2gL}$ a cui abbiamo assegnato un'incertezza pari a
 $$	
 	\sigma_k = k \sqrt{ 2 \left(\frac{\sigma_{v_0}}{v_0} \right)^2 + \left(\frac{\sigma_L}{L} \right)^2}
@@ -176,10 +175,12 @@ A questo punto non rimaneva altro che fare i grafici $T-\theta$, fittando i due 
 Osserviamo il grafico dei residui di entrambi i due modelli teorici:
 
 \begin{figure}[H]
+\hspace{-0.025\textwidth}
 \begin{minipage}{0.49\textwidth}
 	\centering
 	\includegraphics[scale=0.60]{Residui_taylor_2.pdf}
 \end{minipage}
+\hspace{0.005\textwidth}
 \begin{minipage}{0.49\textwidth}
 	\centering
 	\includegraphics[scale=0.60]{Residui_taylor_4.pdf}
@@ -187,6 +188,27 @@ Osserviamo il grafico dei residui di entrambi i due modelli teorici:
 	\caption{Residui dei due fit con i due modelli teorici. Il fatto che gli errori non sono compatibili con lo zero e la chiara asimmetria nelle permanenze che ci sono fra destra e sinistra è indice del fatto che le misure sono dominate dagli errori sistematici dovuti alle forze di attrito. Nonostante ciò, dall'analisi del $\chi^2$ si osserva che, come è lecito aspettarsi, l'espansione in serie di Taylor al quarto ordine possiede un $\chi^2$ minore siccome \emph{approssima} meglio la dipendenza fra il periodo in funzione dell'angolo $\theta$.}
 \end{figure}
 
-\noindent il fatto che gli errori non siano, per la maggior parte, compatibili con lo zero e l'asimmetria nelle permanenze sono un chiaro segnale che le incertezze di queste misure sono dominate da errori di natura non statistica: probabilmente, avendo fatto partire il pendolo da un'ampiezza maggiore, il pendolo possedeva una velocità maggiore e, dunque, l'attrito esercitato dall'aria che è proporzionale alla velocità ha influito maggiormente in queste misure: a testimonianza di ciò abbiamo rifatto studiato nuovamente, anche con questi dati, della dipendenza fra la velocità e il tempo e, in questo caso, la funzione \texttt{curve\_fit} stima dei parametri meno ragionevoli rispetto a quelli calcolati prima e, proprio come ci aspettavamo, il valore del $\chi^2$ è schizzato verso le stelle siccome sono aumentati gli effetti esercitati dalle forze di attrito che agiscono come errori sistematici. \\
-Nonostante ciò dall'analisi del $\chi^2$ (che in questo caso ha poco senso siccome le misure non statisticamente indipendenti) possiamo osservare che l'espansione di Taylor al quarto ordine del periodo $T(\theta)$ è in migliore accordo, rispetto all'altro modello teorico, con le misure.
+\noindent il fatto che gli errori non siano, per la maggior parte, compatibili con lo zero e l'asimmetria nelle permanenze sono un chiaro segnale che le incertezze di queste misure sono dominate da errori di natura non statistica: probabilmente, avendo fatto partire il pendolo da un'ampiezza maggiore, il pendolo possedeva una velocità maggiore e, dunque, l'attrito esercitato dall'aria che è proporzionale alla velocità ha influito maggiormente in queste misure: a testimonianza di ciò abbiamo rifatto studiato nuovamente, anche con questi dati, della dipendenza fra la velocità e il tempo e, in questo caso, la funzione \texttt{curve\_fit} stima dei parametri meno ragionevoli rispetto a quelli calcolati prima e, proprio come ci aspettavamo, il valore del $\chi^2$ è schizzato verso le stelle siccome sono aumentati gli effetti esercitati dalle forze di attrito che agiscono come errori sistematici: infatti, per quanto riguarda il parametro $v_0(0)$ noi ci aspettavamo un valore (misurato) di $v_0(0)$ pari a $(1.691 \pm 0.005) \, \si{\meter\per\second}$ e il fit stimava un valore di $\hat{v_0} = (1.624 \pm 0.002) \, \si{\meter\per\second}$, che non è assolutamente compatibile entro le barre di errore con il valore da noi misurato (siccome distano fra loro circa $12\sigma$). \\
+Nonostante ciò dall'analisi del $\chi^2$ (che in questo caso ha poco senso siccome le misure non statisticamente indipendenti) possiamo osservare che l'espansione di Taylor al quarto ordine del periodo $T(\theta)$ è in migliore accordo, rispetto all'altro modello teorico, con le misure, siccome il $\chi^2 \approx 19934$ (che è un valore comunque molto alto ma giustificabile dalle dissipazioni dovute alle forze di attrito) mentre il $\chi^2$ dell'altro modello teorico è circa pari a $\chi^2 \approx 27635$.
+Infine, abbiamo confrontato il valore $T_0$ stimato dal fit con quello misurato da noi: siccome si ha che
+$$
+	T_0 = 2 \pi \sqrt{\frac{l}{g}}
+$$
+gli abbiamo assegnato l'incertezza calcolata con la formula $\sigma_f(\theta_1, \theta_2, \cdots) = \sqrt{\left(\frac{\partial f}{\partial \theta_1} (\theta_1, \theta_2, \cdots) \sigma_{\theta_1} \right)^2 + \left(\frac{\partial f}{\partial \theta_2} (\theta_1, \theta_2, \cdots) \sigma_{\theta_2}\right)^2 + \cdots}$, pari a
+$$
+	\sigma_{T_0} = \frac{\pi \sqrt{\frac{l}{g}}}{l} \sigma_l
+$$
+dunque
+\begin{equation}
+	T_0 = (2.1513 \pm 0.0009) \, \si{\second}
+\end{equation}
+mentre i valori di $\hat{T_0}$ stimati rispettivamente dai due fit sono pari a:
+\begin{align*}
+	&T_0 = (2.12892 \pm 0.00006) \, \si{\second} \\
+	&T_0 = (2.12883 \pm 0.00003) \, \si{\second} \\
+\end{align*}
+che già ad occhio si vede che non sono compatibili entro le barre di errore con il valore atteso: la motivazione è sempre quella espressa qua sopra, ovvero che le forze di attrito, facendo partire il pendolo da un'altezza maggiore, influivano maggiormente in questa presa dati.
+
+\section{Conclusioni}
+Sebbene l'esperimento non può considerarsi completamento un successo, siccome siamo riusciti a mostrare la legge che governa il \emph{decadimento} della velocità e non a verificare effettivamente la dipendenza fra il modello teorico previsto dalla teoria riguardo alla dipendenza fra il periodo $T$ e l'angolo $\theta_0$ a causa della presenza di errori sistematici dovuti alle forze di attrito, è stata comunque un'esperienza interessante per quanto riguarda l'effetto delle forze di attrito riguardo alle nostre misurazioni. Nonostante ciò sarebbe interessante ideare un esperimento per verificare la dipendenza fra il periodo e l'angolo in cui è possibile ridurre gli attriti con l'aria oppure ideare un modello teorico che contempla anche la presenza di forze di attrito.
 \end{document}

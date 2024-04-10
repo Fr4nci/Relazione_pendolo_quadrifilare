@@ -9,7 +9,6 @@ def periodo_taylor_2(x, t0):
     return(t0 * (1 + (1./16.) * x ** 2 + (11./3072.) * x ** 4))
 def velocita(x, v_0, _lamdba):
     return(v_0 * np.e ** (-_lamdba * x))
-
 # Grafico Periodo - Tempo
 tempo = data[0]
 periodo = data[1]
@@ -22,6 +21,9 @@ err_l = 0.001
 d = 1.20
 err_d = 0.001
 g = 9.81
+t0 = 2 * np.pi * np.sqrt(l/g)
+err_t0 = ((np.pi/l) * np.sqrt(l/g)) * err_l
+print(f"t0: {t0} +- {err_t0}")
 err_trans_time = np.full(shape=len(transit_time), fill_value=(4 * 10 ** (-6))/np.sqrt(12), dtype=float)
 vel = (w/transit_time) * (l/d)
 err_vel = np.sqrt((err_w/w) ** 2 + (err_l/l) ** 2 + (err_d/d)**2 + (err_trans_time/transit_time) ** 2) * vel
@@ -49,6 +51,7 @@ for el in range(len(vel)):
     acc = acc + ((vel[el] - velocita(tempo[el], v_0_hat, _lambda_hat))/err_vel[el]) ** 2
 print(acc)
 print(len(vel))
+print(f"{vel[0]} +- {err_vel[0]}")
 residui = vel - velocita(tempo, v_0_hat, _lambda_hat)
 ax2.errorbar(tempo, residui, yerr=err_vel, fmt='o')
 ax2.axhline(y=0, color="orange")
@@ -58,7 +61,7 @@ ax2.grid(color='lightgray', ls='dashed')
 plt.savefig("Fit_velocita.pdf")
 plt.show()
 # Sezione Taylor con due ordini di espansione differenti
-data = np.loadtxt("test4_angolo_grand_1.txt", unpack=True)
+data = np.loadtxt("test2_600.txt", unpack=True)
 tempo = data[0]
 periodo = data[1]
 transit_time = data[2]
@@ -77,7 +80,7 @@ plt.errorbar(theta_0, periodo, yerr=err_periodo, xerr=err_theta_0, fmt='o')
 x = np.linspace(0, np.pi/2)
 plt.plot(x, periodo_taylor(x, t0_hat))
 plt.plot(x, periodo_taylor_2(x, t1_hat))
-plt.savefig("Fit_ampiezza.pdf")
+# plt.savefig("Fit_ampiezza.pdf")
 plt.show()
 print(f"{t0_hat} +- {sigma_t0}")
 print(f"{t1_hat} +- {sigma_t1}")
@@ -85,7 +88,7 @@ residui1 = periodo - periodo_taylor(theta_0, t0_hat)
 residui2 = periodo - periodo_taylor_2(theta_0, t1_hat)
 plt.errorbar(theta_0, residui1, yerr=err_periodo, xerr=err_theta_0, fmt='o', color="blue")
 plt.axhline(y=0, color="orange")
-plt.savefig("Residui_taylor_2.pdf")
+# plt.savefig("Residui_taylor_2.pdf")
 acc = 0
 for el in range(len(periodo)):
     acc = acc + ((periodo[el] - periodo_taylor(theta_0[el], t0_hat))/err_periodo[el]) ** 2
@@ -93,7 +96,7 @@ print(f"Il chi quadro di Taylor al secondo ordine è: {acc}")
 plt.show()
 plt.errorbar(theta_0, residui2, yerr=err_periodo, xerr=err_theta_0, fmt='o', color="blue")
 plt.axhline(y=0, color="orange")
-plt.savefig("Residui_taylor_4.pdf")
+# plt.savefig("Residui_taylor_4.pdf")
 plt.show()
 acc = 0
 for el in range(len(periodo)):

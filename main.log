@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.14)  10 APR 2024 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.14)  10 APR 2024 21:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1516,7 +1516,7 @@ LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <5.5> not available
 
 pdfTeX warning: pdflatex.exe (file ./pendolo_fisico_2.pdf): PDF inclusion: foun
 d PDF version <1.6>, but at most version <1.5> allowed
-<pendolo_fisico_2.pdf, id=56, 227.18515pt x 194.12724pt>
+<pendolo_fisico_2.pdf, id=57, 227.18515pt x 194.12724pt>
 File: pendolo_fisico_2.pdf Graphic file (type pdf)
 <use pendolo_fisico_2.pdf>
 Package pdftex.def Info: pendolo_fisico_2.pdf  used on input line 79.
@@ -1524,52 +1524,52 @@ Package pdftex.def Info: pendolo_fisico_2.pdf  used on input line 79.
 [4 <./pendolo_fisico_2.pdf>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 112.
+(Font)              size <5> substituted on input line 114.
 
-<Grafico_periodo_tempo.pdf, id=90, 462.52798pt x 346.89601pt>
+<Grafico_periodo_tempo.pdf, id=92, 462.52798pt x 346.89601pt>
 File: Grafico_periodo_tempo.pdf Graphic file (type pdf)
 <use Grafico_periodo_tempo.pdf>
 Package pdftex.def Info: Grafico_periodo_tempo.pdf  used on input line 119.
-(pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
 [5 <./Grafico_periodo_tempo.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 125--128
 
  []
 
-<Fit_velocita.pdf, id=114, 462.52798pt x 346.89601pt>
+<Fit_velocita.pdf, id=116, 462.52798pt x 346.89601pt>
 File: Fit_velocita.pdf Graphic file (type pdf)
 <use Fit_velocita.pdf>
 Package pdftex.def Info: Fit_velocita.pdf  used on input line 132.
 (pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
-<pendolo_quadrifilare_zoom.png, id=115, 1156.32pt x 571.53525pt>
+<pendolo_quadrifilare_zoom.png, id=117, 1156.32pt x 571.53525pt>
 File: pendolo_quadrifilare_zoom.png Graphic file (type png)
 <use pendolo_quadrifilare_zoom.png>
 Package pdftex.def Info: pendolo_quadrifilare_zoom.png  used on input line 133.
 
 (pdftex.def)             Requested size: 462.5198pt x 228.61005pt.
-
-LaTeX Warning: Reference `eq:angolo' on page 6 undefined on input line 152.
-
 [6 <./Fit_velocita.pdf> <./pendolo_quadrifilare_zoom.png>]
-<Fit_piccola_ampiezza.pdf, id=164, 462.52798pt x 346.89601pt>
+
+LaTeX Warning: Reference `eq:angolo' on page 7 undefined on input line 152.
+
+<Fit_piccola_ampiezza.pdf, id=166, 462.52798pt x 346.89601pt>
 File: Fit_piccola_ampiezza.pdf Graphic file (type pdf)
 <use Fit_piccola_ampiezza.pdf>
-Package pdftex.def Info: Fit_piccola_ampiezza.pdf  used on input line 164.
+Package pdftex.def Info: Fit_piccola_ampiezza.pdf  used on input line 163.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
-<zoom_piccole_ampiezze.png, id=165, 483.0045pt x 410.7345pt>
+<zoom_piccole_ampiezze.png, id=167, 483.0045pt x 410.7345pt>
 File: zoom_piccole_ampiezze.png Graphic file (type png)
 <use zoom_piccole_ampiezze.png>
-Package pdftex.def Info: zoom_piccole_ampiezze.png  used on input line 165.
+Package pdftex.def Info: zoom_piccole_ampiezze.png  used on input line 164.
 (pdftex.def)             Requested size: 241.50165pt x 205.36674pt.
-<Fit_ampiezza.pdf, id=166, 462.52798pt x 346.89601pt>
+<Fit_ampiezza.pdf, id=168, 462.52798pt x 346.89601pt>
 File: Fit_ampiezza.pdf Graphic file (type pdf)
 <use Fit_ampiezza.pdf>
-Package pdftex.def Info: Fit_ampiezza.pdf  used on input line 173.
+Package pdftex.def Info: Fit_ampiezza.pdf  used on input line 172.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
- [7
+[7
 
  <./Fit_piccola_ampiezza.pdf> <./zoom_piccole_ampiezze.png>]
-<Residui_taylor_2.pdf, id=189, 462.52798pt x 346.89601pt>
+<Residui_taylor_2.pdf, id=191, 462.52798pt x 346.89601pt>
 File: Residui_taylor_2.pdf Graphic file (type pdf)
 <use Residui_taylor_2.pdf>
 Package pdftex.def Info: Residui_taylor_2.pdf  used on input line 181.
@@ -1579,22 +1579,28 @@ Overfull \hbox (36.71301pt too wide) in paragraph at lines 181--182
  [][] 
  []
 
-<Residui_taylor_4.pdf, id=190, 462.52798pt x 346.89601pt>
+<Residui_taylor_4.pdf, id=192, 462.52798pt x 346.89601pt>
 File: Residui_taylor_4.pdf Graphic file (type pdf)
 <use Residui_taylor_4.pdf>
-Package pdftex.def Info: Residui_taylor_4.pdf  used on input line 185.
+Package pdftex.def Info: Residui_taylor_4.pdf  used on input line 186.
 (pdftex.def)             Requested size: 277.51892pt x 208.1392pt.
 
-Overfull \hbox (36.71301pt too wide) in paragraph at lines 185--186
+Overfull \hbox (36.71301pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-90.
+91.
 (c:/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [8 <./Fit_ampiezza.pdf> <./Residui_taylor_2.pdf> <./Residui_taylor_4.pdf>] (.
-/main.aux)
+) [8 <./Fit_ampiezza.pdf> <./Residui_taylor_2.pdf> <./Residui_taylor_4.pdf>]
+Overfull \hbox (67.5355pt too wide) in paragraph at lines 196--198
+\T1/cmr/m/n/10 gli ab-bia-mo as-se-gna-to l'in-cer-tez-za cal-co-la-ta con la f
+or-mu-la $\OML/npxmi/m/it/10 ^^[[]\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 ^^R[]; 
+^^R[]; [] \LMS/npxsy/m/n/10 º \U/npxmia/m/it/10 = []$\T1/cmr/m/n/10 ,
+ []
+
+[9] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -1607,13 +1613,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52572 strings out of 478278
- 1163072 string characters out of 5850546
- 2058708 words of memory out of 5000000
- 70076 multiletter control sequences out of 15000+600000
+ 52576 strings out of 478278
+ 1163105 string characters out of 5850546
+ 2057708 words of memory out of 5000000
+ 70077 multiletter control sequences out of 15000+600000
  518074 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,15n,83p,1190b,1344s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,15n,83p,1430b,1344s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/
 texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb><c:/texlive/2021/texmf-dist/fon
@@ -1636,10 +1642,10 @@ sfrm1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1000.p
 fb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/tex
 live/2021/texmf-dist/fonts/type1/public/cm-super/sfxc1000.pfb><c:/texlive/2021/
 texmf-dist/fonts/type1/public/newtx/txexs.pfb>
-Output written on main.pdf (8 pages, 576598 bytes).
+Output written on main.pdf (9 pages, 582470 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 36 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 
