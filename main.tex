@@ -56,9 +56,8 @@
 \end{table}
 
 \noindent Dunque per calcolare l'angolo $\theta_0$ da cui è partito il pendolo possiamo utilizzare la velocità $v_0$ con cui arriva sulla verticale del pendolo con la seguente formula:
-\begin{equation}
+\begin{equation} \label{eq:angolo}
 	\theta_0 = \arccos{\left(1- \frac{v_0^2}{2gL} \right) }
-	\label{angolo}
 \end{equation}
 	\section{Strumenti e materiali}
 	\textbf{Materiali}:
@@ -133,11 +132,11 @@ dove $v_{CM}(0)$ rappresenta la velocità posseduta dal centro di massa quando o
 	\includegraphics[scale=0.40, width=0.5\textwidth, height=6cm]{pendolo_quadrifilare_zoom.png}
 	\caption{Fit del modello teorico con $v_0$ e $\lambda$ come parametri di liberi, zoom di una porzione del fit e grafico dei residui: si osserva che, guardando esclusivamente il fit, questo risulta essere \emph{buono} siccome, a parte per i primi (visibili nello zoom che ho effettuato), i punti sono compatibili, entro le barre di errore, con il fit. Dal grafico dei residui, a parte per i primi (come avevamo già dedotto dal grafico del fit) che non sono compatibili entro le barre di errore con l'asse $y=0$, i punti sono tutti compatibili sebbene ci siano numerose permanenze e i punti non oscillano intorno allo zero distribuendosi in maniera per lo più casuale indica che il nostro modello teorico va a sovrastimare il reale valore atteso. Una probabile spiegazione di questo effettuo è forse dovuto al fatto che il nostro modello teorico suppone che l'attrito dell'aria sia uno smorzatore ideale dunque proporzionale alla velocità del centro di massa, ma nella realtà la forza di attrito dipende anche dalla geometria del corpo}
 \end{wrapfigure}
-\noindent Effettuando l'analisi del $\chi_2$, si osserva che, questo risulta essere circa
+\noindent Effettuando l'analisi del $\chi^2$, si osserva che, questo risulta essere circa
 $$
 	\chi^2 \approx 410
 $$
-e, in questo caso, abbiamo un numero di gradi di libertà del fit pari a $557$. Sebbene il valore del $\chi_2$ si discosta significativamente dal valore atteso, è comunque abbastanza \emph{ragionevole} siccome stiamo operando con un modello che tiene conto delle forze di attrito come proporzionali alla velocità, ma ne trascura effetti come la forma del corpo che però ne influenzano il moto. \\
+e, in questo caso, abbiamo un numero di gradi di libertà del fit pari a $557$. Sebbene il valore del $\chi^2$ si discosta significativamente dal valore atteso, è comunque abbastanza \emph{ragionevole} siccome stiamo operando con un modello che tiene conto delle forze di attrito come proporzionali alla velocità, ma ne trascura effetti come la forma del corpo che però ne influenzano il moto. \\
 I parametri stimati dal fit risultano esseri pari a
 \begin{align}
 	&v_0 = (0.5825 \pm 0.0001) \, \si{\meter\per\second} \\
@@ -149,7 +148,7 @@ A questo punto abbiamo studiato la dipendenza fra il periodo dell'oscillazione e
 	&T(\theta) = T_0 \left(1 + \frac{1}{16}\theta_0^2 \right) \\
 	&T(\theta) = T_0 \left(1 + \frac{1}{16}\theta_0^2 + \frac{11}{3072}\theta_0^4 \right)
 \end{align}
-Tuttavia sorge la domanda di quale errore porre al periodo di oscillazione misurato dallo strumento: non sapendo che tipo di operazioni matematiche il programma di acquisizione effettuava per calcolare il periodo che misurava ogni volta in cui la sbarretta di ferro copriva la fotocellula, abbiamo osservato le varie misure e abbiamo osservato che la differenza fra un periodo ed un altro non è mai inferiore a circa $0.0001 \, \si{\second}$ dunque abbiamo deciso di utilizzare questo valore come \clearpage \noindent una sorta di \emph{sensibilità} su ogni misura del periodo. Per quanto riguarda il calcolo di $\theta$, abbiamo utilizzato la formula~\ref{eq:angolo} e abbiamo assegnato un'incertezza pari a
+Tuttavia sorge la domanda di quale errore porre al periodo di oscillazione misurato dallo strumento: non sapendo che tipo di operazioni matematiche il programma di acquisizione effettuava per calcolare il periodo che misurava ogni volta in cui la sbarretta di ferro copriva la fotocellula, abbiamo osservato le varie misure e abbiamo osservato che la differenza fra un periodo ed un altro non è mai inferiore a circa $0.0001 \, \si{\second}$ dunque abbiamo deciso di utilizzare questo valore come \clearpage \noindent una sorta di \emph{sensibilità} su ogni misura del periodo. Per quanto riguarda il calcolo di $\theta$, abbiamo utilizzato la  formula~\ref{eq:angolo} e abbiamo assegnato un'incertezza pari a
 $$
 	\sigma_{\theta_0} = \left| {\frac{1}{\sqrt{1-k^2}}\sigma_k} \right|
 $$
