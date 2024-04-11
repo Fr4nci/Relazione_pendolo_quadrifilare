@@ -9,7 +9,7 @@
 	\tableofcontents
 	\newpage
 	\section{Scopo}
-		Stabilire la dipendenza che sussiste fra il periodo dell'oscillazione e la sua ampiezza
+		Stabilire la dipendenza che sussiste fra il periodo dell'oscillazione e la sua ampiezza di un pendolo quadrifiliare
 	\section{Cenni teorici}
 	Il pendolo fisico (o il pendolo semplice, che può essere visto come caso particolare del pendolo fisico) può essere schematizzato come un corpo rigido soggetto ad una forza peso che induce un momento torcente rispetto al perno $O$ e la reazione vincolare $R$ (che non induce un momento torcente rispetto al polo $O$) che agiscono sulla massa $m$, da cui si ricava utilizzando la $2^a$ cardinale:
 	\begin{equation}
@@ -66,17 +66,17 @@
 	\end{itemize}
 	\textbf{Strumenti}:
 	\begin{itemize}
-		\item Computer con programma di acquisizione;
+		\item Computer con programma di acquisizione Plasduino;
 		\item Metro a nastro, con sensibilità pari a $\pm 0.001 \, \si{m}$;
 		\item Calibro ventesimale, con sensibilità pari a $\pm 0.005 \, \si{\centi\meter}$;
-		\item Fotocellula;
+		\item Fotocellula con sensibilità nel misurare gli istanti di tempo pari a $\pm 4 \, \si{\micro\second}$;
 	\end{itemize}
 	\section{Descrizione delle misure}
 	Per effettuare questo esperimento era necessario misurare la velocità del pendolo quando incontrava la verticale, ovvero quando $\theta = 0$ e il periodo di oscillazione del pendolo. 
 	\begin{figure}[htbp]
 		\centering
   		\includegraphics[scale=0.80]{pendolo_fisico_2.pdf}
-  		\caption{Schematizzazione del nostro apparato sperimentale: il pendolo, nel laboratorio, è in realtà sorretto da 4 fili che agiscono, complessivamente, come un unico filo di massa trascurabile e di lunghezza $L$ che collega il perno al CM del corpo. La massa $m$ presenta, inoltre, una sbarretta di ferro a distanza $d$ che utilizziamo per coprire una fotocellula che ci misura l'istante in cui la fotocellula viene coperta, il periodo dell'oscillazione del pendolo con la velocità che possiede passando la verticale e il tempo transiente, ovvero il tempo in cui la sbarretta copre completamente la fotocellula. Da notare che la sbarretta, trovandosi a distanza $d$, viaggia ad una velocità maggiore rispetto al centro di massa}
+  		\caption{Schematizzazione del nostro apparato sperimentale: il pendolo, nel laboratorio, è in realtà sorretto da 4 fili (di massa trascurabile) che agiscono, complessivamente, come un unico filo di massa trascurabile e di lunghezza $L$ che collega il perno al CM del corpo. La massa $m$ presenta, inoltre, una sbarretta di ferro a distanza $d$ che utilizziamo per coprire una fotocellula che ci misura l'istante in cui la fotocellula viene coperta, il periodo dell'oscillazione del pendolo con la velocità che possiede passando la verticale e il tempo transiente, ovvero il tempo in cui la sbarretta copre completamente la fotocellula. Da notare che la sbarretta, trovandosi a distanza $d$, viaggia ad una velocità maggiore rispetto al centro di massa}
   		\label{fig:pendolo}
 	\end{figure}	
 	Per fare ciò ci siamo serviti di una fotocellula e di un programma di acquisizione che misurava ogni istante in cui il corpo attivava la fotocellula, il periodo dell'oscillazione che il pendolo stava compiendo (siccome gli attriti dell'aria non sono trascurabili) e il \emph{tempo transiente}, ovvero il tempo in cui il nostro pendolo quadrifilare andava ad oscurare con la sbarretta la fotocellula. Per calcolare tutte le grandezze necessarie per l'esperienza, abbiamo misurato la lunghezza $L$, ovvero la lunghezza del CM del corpo dal perno di rotazione, la lunghezza $d$, ovvero la distanza del perno dal punto della sbarretta che verticalmente oscurava la fotocellula, e la larghezza $w$ della sbarretta; che risultano essere pari a
@@ -108,7 +108,7 @@ a cui possiamo assegnare l'incertezza tramite la seguente formula
 \begin{equation}
 	\sigma_{v_{CM}} = v_{CM} \sqrt{ \left( \frac{\sigma_w}{w} \right)^2 + \left( \frac{\sigma_{\tau_i}}{\tau_i} \right)^2 + \left( \frac{\sigma_l}{l} \right)^2 + \left( \frac{\sigma_d}{d} \right)^2}
 \end{equation}
-Tuttavia che errore possiamo assegnare a $\tau_i$? Considerando che la misura del \emph{tempo transiente} viene fatta da uno strumento digitale allora tutti i valori compresi nel range della sensibilità dello strumento sono equiprobabili, dunque l'errore che possiamo assegnare a $\tau_i$ è pari a
+Mentre, per quanto riguarda le incertezze che abbiamo assegnato ai vari $\tau_i$ misurati, abbiamo considerato che la misura del \emph{tempo transiente} viene fatta da uno strumento digitale, pertanto è caratterizzato da una distribuzione di probabilità continua uniforme (tutti i valori compresi nel range della sensibilità dello strumento sono equiprobabili), dunque l'errore che possiamo assegnare a $\tau_i$ è pari a
 $$
 	\sigma_{\tau_i} = \frac{4}{\sqrt{12}} \, \si{\micro\second}
 $$
@@ -148,7 +148,7 @@ A questo punto abbiamo studiato la dipendenza fra il periodo dell'oscillazione e
 	&T(\theta) = T_0 \left(1 + \frac{1}{16}\theta_0^2 \right) \\
 	&T(\theta) = T_0 \left(1 + \frac{1}{16}\theta_0^2 + \frac{11}{3072}\theta_0^4 \right)
 \end{align}
-Tuttavia sorge la domanda di quale errore porre al periodo di oscillazione misurato dallo strumento: non sapendo che tipo di operazioni matematiche il programma di acquisizione effettuava per calcolare il periodo che misurava ogni volta in cui la sbarretta di ferro copriva la fotocellula, abbiamo osservato le varie misure e abbiamo osservato che la differenza fra un periodo ed un altro non è mai inferiore a circa $0.0001 \, \si{\second}$ dunque abbiamo deciso di utilizzare questo valore come \clearpage \noindent una sorta di \emph{sensibilità} su ogni misura del periodo. Per quanto riguarda il calcolo di $\theta$, abbiamo utilizzato la  formula~\ref{eq:angolo} e abbiamo assegnato un'incertezza pari a
+Tuttavia sorge la domanda di quale errore porre al periodo di oscillazione misurato dallo strumento: non sapendo che tipo di operazioni matematiche il programma di acquisizione effettuava per calcolare il periodo che misurava ogni volta in cui la sbarretta di ferro copriva la fotocellula, abbiamo osservato le varie misure e abbiamo osservato che la differenza fra un periodo ed un altro non è mai inferiore a circa $0.0001 \, \si{\second}$ dunque abbiamo deciso di utilizzare questo valore, sovrastimando probabilmente l'effettiva incertezza commessa dal programma nel misurare il periodo di oscillazione, come \clearpage \noindent una sorta di \emph{sensibilità} su ogni misura del periodo. Per quanto riguarda il calcolo di $\theta$, abbiamo utilizzato la  formula~\ref{eq:angolo} e abbiamo assegnato un'incertezza pari a
 $$
 	\sigma_{\theta_0} = \left| {\frac{1}{\sqrt{1-k^2}}\sigma_k} \right|
 $$
@@ -164,7 +164,7 @@ A questo punto non rimaneva altro che fare i grafici $T-\theta$, fittando i due 
 	\caption{Si osserva che i punti non si dispongono con un andamento parabolico come ci aspetteremmo: probabilmente il motivo deriva dal fatto che abbiamo fatto partire il pendolo da un'ampiezza troppo piccola per cui la dipendenza dell'angolo al secondo ordine era ancora trascurabile e ciò ha fatto sballare il fit}
 \end{figure}
 
-\noindent Come si può vedere dallo zoom nelle immagini qua sopra, le misurazioni non si dispongono con un assetto \emph{parabolico} sul modello teorico come ci aspettavamo: una spiegazione molto plausibile di ciò è dovuto al fatto che i valori che abbiamo misurato erano ancora troppi piccoli e la dipendenza dall'angolo del periodo era ancora trascurabile e, conseguentemente, il fit ne è uscito leggermente \emph{sballato}. Abbiamo a quel punto deciso di rieffettuare le misure facendo partire il pendolo da un'ampiezza più grande (circa $\ang{40}$) e abbiamo rieffettuato il grafico (riportato nella prossima pagina)
+\noindent Come si può vedere dallo zoom nelle immagini qua sopra, le misurazioni non si dispongono con un assetto \emph{parabolico} sul modello teorico come ci aspettavamo: una spiegazione plausibile di ciò è dovuto al fatto che i valori che abbiamo misurato erano ancora troppi piccoli e la dipendenza dall'angolo del periodo era ancora trascurabile e, conseguentemente, il fit, già ad occhio, non è dei migliori. Abbiamo a quel punto deciso di rieffettuare le misure facendo partire il pendolo da un'ampiezza più grande (circa $\ang{40}$) e abbiamo rieffettuato il grafico (riportato nella prossima pagina)
 
 \begin{figure}[H]
 	\centering
